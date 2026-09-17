@@ -1,0 +1,21 @@
+[Unit]
+Description=WannaTalk Bookings API
+After=network.target postgresql.service
+
+[Service]
+Type=simple
+User=www-data
+Group=www-data
+WorkingDirectory=/opt/wannatalk-bookings/backend
+EnvironmentFile=/etc/wannatalk-bookings.env
+ExecStart=/usr/bin/node src/server.js
+Restart=on-failure
+RestartSec=5
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectHome=true
+ProtectSystem=full
+UMask=027
+
+[Install]
+WantedBy=multi-user.target

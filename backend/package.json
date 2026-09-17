@@ -1,0 +1,22 @@
+{
+  "name": "wannatalk-bookings-api",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node --watch src/server.js",
+    "start": "node src/server.js",
+    "check": "node --check src/server.js && node --check src/db.js && node --check src/auth.js && node --check src/mail.js && node --check src/sms.js && node --check src/mfa.js && node --check src/communications.js && node --check src/routes/auth.js && node --check src/routes/health.js && node --check src/routes/providers.js && node --check src/routes/patients.js && node --check src/routes/locations.js && node --check src/routes/appointments.js && node --check src/routes/auditLogs.js && node --check src/routes/registrations.js && node --check src/routes/communications.js && node --check src/routes/followUps.js && node --check src/routes/waitingList.js && node --check scripts/set-password.js && node --check scripts/import-legacy-appointments.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "helmet": "^8.0.0",
+    "jsonwebtoken": "^9.0.2",
+    "morgan": "^1.10.0",
+    "nodemailer": "^10.0.10",
+    "pg": "^8.13.1"
+  }
+}
